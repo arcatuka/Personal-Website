@@ -9,6 +9,9 @@
   --secondaryText:#4b5156;
 
   --themeDotBorder:#24292e;
+  --previewbg: #95a975;
+  --previewshadow:#f0ead6;
+  --buttonColor: black;
 }
 
 html, body{
@@ -134,6 +137,8 @@ h6 {font-size: 16px;}
 }
 .left-column{
   grid-area: left-column;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .theme-dot{
@@ -188,6 +193,71 @@ h6 {font-size: 16px;}
 }
 .right-column{
   grid-area: right-column;
+  display: grid;
+  align-content: center;
+}
+#preview{
+  width: 300px;
+  border: 1.5px solid #17a2b8;
+  background-color:  var(--previewbg);
+  padding: 15px;
+  position: relative;
+}
+.corner{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1.5px solid #17a2b8;
+  background-color: #fff;
+  position: absolute;
+}
+
+#corner-tl{
+  top: -5px;
+  left: -5px;
+}
+#corner-tr{
+  top: -5px;
+  right: -5px;
+}
+
+#corner-br{
+  bottom: -5px;
+  right: -5px;
+}
+#corner-bl{
+  bottom: -5px;
+  left: -5px;
+}
+#preview-shadow{
+  background-color: var(--previewshadow);
+  width: 300px;
+  height: 180px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+.about-wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+}
+#submit-btn{
+  margin-top: 10px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  background-color: var(--buttonColor);
+  border: none;
+}
+
+.input-field{
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--secondaryColor);
+  border-radius: 5px;
+  border: 1px solid var(--borderColor);
+  font-size: 14px;
 }
 @media screen and (max-width: 1200px) {
   .main-container{
